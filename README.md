@@ -46,7 +46,7 @@ Le modèle estime la performance à partir des habitudes d’étude, du sommeil,
 ---
 
 ## STRUCTURE DU PROJET  
-
+---
 ├── app/
 │   └── app.py                # Application Streamlit
 ├── assets/                   # images/screens EDA & app
@@ -72,42 +72,18 @@ Le modèle estime la performance à partir des habitudes d’étude, du sommeil,
 └── 
 
 
----
+ ---
 
 ## INSTALLATION  
 
 ### 1. Cloner le dépôt  
-```bash
+ ```bash
 git clone https://github.com/SOMBIEB/MachineLearning-project-student-exam-score-predictor.git
 cd student_exam_score_predict
-2. Créer et activer un environnement virtuel
-bash
-Copy code
+
+---
+### 2. Créer et activer un environnement virtuel
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1  
-3. Installer les dépendances
-bash
-Copy code
-pip install -r requirements.txt
-UTILISATION
-1. Exploration et entraînement
-Ouvrir le notebook :
 
-bash
-Copy code
-notebooks/notebook.ipynb
-Explorer les données et sauvegarder le modèle (best_model.pkl).
-
-2. Lancer l’application
-bash
-Copy code
-streamlit run app/app.py
-3. Remplir le formulaire et obtenir une prédiction.
-REMARQUES
-NaN et valeurs manquantes → ajout d’une étape d’imputation et validation dans Streamlit.
-
-Bien que Random Forest semblait initialement performant, il prédisait des scores irréalistes (≈60/100 même sans présence ni heures d’étude).
-
-Après réentraînement et ajustements, la Régression Linéaire a obtenu les meilleurs résultats (R² = 0.81, RMSE ≈ 7.19) tout en restant cohérente avec la logique académique.
-
-Ce choix illustre l’importance de privilégier un modèle à la fois statistiquement robuste et pertinent métier.
+### 3. Installer les dépendances
