@@ -1,0 +1,33 @@
+project:
+  name: "student-exam-scores-prediction"
+
+task: "regression"         
+target: "exam_score"     
+
+paths:
+  data_raw_dir: "data/raw"
+  data_processed_dir: "data/processed"
+  models_dir: "models"
+  dataset_filename: "student_habits_performance.csv"
+
+
+model:
+  candidates:
+    - name: "LinearRegression"
+      params: {}
+    - name: "RandomForestRegressor"
+      params:
+        n_estimators: [100, 200]
+        max_depth: [None, 10, 20]
+    - name: "DecisionTreeRegressor"
+      params:
+        max_depth: [3,5,10]
+        min_samples_split: [3,5]
+  select_best: true  # Choisir automatiquement le meilleur modèle selon la métrique
+  metric: "rmse"  # métrique pour évaluer les modèles
+  random_state: 42
+  test_size: 0.2  # proportion des données pour le test
+
+app:
+  title: "Student Success Predictor"
+  description: "An application to predict student success based on their habits and demographics."

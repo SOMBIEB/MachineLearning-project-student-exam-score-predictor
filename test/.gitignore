@@ -1,0 +1,42 @@
+
+# Environnements virtuels
+.venv/
+env/
+venv/
+.env
+*.env
+
+# Données
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Modèles
+*.pkl
+*.joblib
+
+# Cache & compilés
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.joblib
+*.db
+*.sqlite
+*.log
+
+# Jupyter checkpoints
+*.ipynb_checkpoints/
+.ipynb_checkpoints/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+
+
+# IDE / éditeurs
+.vscode/
+.idea/
+.code-workspace

@@ -1,0 +1,16 @@
+@"
+* text=auto
+*.py     text eol=lf
+*.ipynb  text eol=lf
+*.sh     text eol=lf
+*.bat    text eol=crlf
+
+# binaires
+*.png    -text
+*.jpg    -text
+*.jpeg   -text
+*.gif    -text
+*.pkl    -text
+*.parquet -text
+*.joblib -text
+
