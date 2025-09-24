@@ -15,7 +15,7 @@ data/processed/*
 # Modèles
 *.pkl
 *.joblib
-
+*.parquet
 # Cache & compilés
 __pycache__/
 *.pyc
